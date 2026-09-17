@@ -1,0 +1,12 @@
+{
+  "name": "commit-planner",
+  "version": "1.0.0",
+  "description": "Plans small, focused git commits with Conventional Commits messages. Review the plan, then commit as yourself. Never pushes.",
+  "author": {
+    "name": "YOUR NAME"
+  },
+  "homepage": "https://github.com/YOUR-GITHUB-USER/commit-planner",
+  "repository": "https://github.com/YOUR-GITHUB-USER/commit-planner",
+  "license": "MIT",
+  "keywords": ["git", "commits", "conventional-commits", "pre-commit", "code-review"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "commit-planner",
+  "owner": {
+    "name": "YOUR NAME"
+  },
+  "plugins": [
+    {
+      "name": "commit-planner",
+      "source": "./",
+      "description": "Plans small, focused git commits with Conventional Commits messages. Review the plan, then commit as yourself. Never pushes.",
+      "version": "1.0.0",
+      "category": "productivity"
+    }
+  ]
+}
