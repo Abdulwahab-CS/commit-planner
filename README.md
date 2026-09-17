@@ -142,53 +142,6 @@ npx skills add Abdulwahab-CS/commit-planner
 **Manual**: copy `skills/commit-planner/` into your agent's skills folder, e.g.
 `~/.claude/skills/` for Claude Code.
 
-## Using it outside Claude Code
-
-The skill is a plain `SKILL.md` plus three scripts, so any agent that reads Agent Skills
-can run it. Only the invocation differs.
-
-**Install for Cursor, Codex or Gemini CLI**
-
-```
-npx skills add Abdulwahab-CS/commit-planner --agent cursor codex gemini-cli
-```
-
-Add `-g` to install for your user instead of the current project. These agents share one
-skills folder: `.agents/skills/commit-planner/` in the project, or
-`~/.agents/skills/commit-planner/` globally. Copying the folder there by hand works too.
-
-Other agents are supported by the same command, for example `--agent windsurf`,
-`--agent opencode`, `--agent github-copilot`, or `--agent '*'` for every agent it detects.
-Run `npx skills add Abdulwahab-CS/commit-planner` with no flags to pick from a list.
-
-**Invoke it**
-
-| Agent | How to invoke |
-|---|---|
-| Claude Code | `/commit-planner`, or ask *"plan my commits"* |
-| Cursor | Ask *"plan my commits"* in the Agent pane |
-| Codex | Ask *"plan my commits"* |
-| Gemini CLI | Ask *"plan my commits"* |
-| Any other | Ask *"plan my commits"* |
-
-The `/commit-planner` slash command exists only in Claude Code. Everywhere else, say the
-options in plain words, for example *"plan my commits, run pre-commit and check CI"*, which
-is the same as `/commit-planner pre-commit ci`.
-
-If an agent ignores the skill, name it directly: *"use the commit-planner skill to plan my
-commits"*.
-
-**What to expect**
-
-The behaviour is identical on every agent: `COMMIT_PLAN.md` is written first, nothing is
-committed until you say **proceed**, and nothing is ever pushed. Agents that ask before
-running shell commands will prompt for the `git` and script calls; approve them to let the
-plan be built.
-
-Only two things are Claude Code specific: the plugin install and the `/commit-planner`
-command. Everything else, including hiding `COMMIT_PLAN.md` from `git status` through
-`.git/info/exclude`, is plain git and works the same everywhere.
-
 ## Use
 
 Ask *"plan my commits"*, or run `/commit-planner` with optional options:
